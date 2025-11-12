@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-staq-yellow: #FFC800;
+  --color-staq-gray: #101010;
+  --font-family-karl: var(--font-karl), sans-serif;
+}
+
+body {
+  background-color: var(--color-staq-gray);
+}
+
+@keyframes spin-fast {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-1080deg);
+  }
+}

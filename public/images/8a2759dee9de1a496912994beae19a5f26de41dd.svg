@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ring-1">
+<path id="top-left" d="M1.00009 5.26532V2.96861C1.00009 1.88138 1.88147 1 2.9687 1H5.15604" stroke="var(--stroke-0, #101010)" stroke-width="2" stroke-linecap="round"/>
+<path id="bottom-left" d="M1 11.6086V13.9053C1 14.9926 1.88138 15.8739 2.96861 15.8739H5.15595" stroke="var(--stroke-0, #101010)" stroke-width="2" stroke-linecap="round"/>
+<path id="top-right" d="M15.7645 5.26531V2.96861C15.7645 1.88137 14.8832 1 13.7959 1H11.6086" stroke="var(--stroke-0, #101010)" stroke-width="2" stroke-linecap="round"/>
+<path id="bottom-right" d="M15.7645 11.6086V13.9053C15.7645 14.9926 14.8832 15.8739 13.7959 15.8739H11.6086" stroke="var(--stroke-0, #101010)" stroke-width="2" stroke-linecap="round"/>
+</g>
+</svg>
