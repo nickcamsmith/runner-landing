@@ -44,7 +44,7 @@ export default function Home() {
   };
 
   return (
-    <main className="relative w-full h-screen overflow-hidden bg-staq-gray">
+    <main className="relative w-full h-dvh overflow-hidden bg-staq-gray">
       {/* Background Image Slideshow */}
       <div className="absolute inset-0 w-full h-full">
         <div className="relative w-full h-full">
@@ -61,8 +61,8 @@ export default function Home() {
       </div>
 
       {/* Runner Text Logo with centered running man */}
-      <div className="absolute left-1/2 top-[38px] md:top-[38px] -translate-x-1/2 flex items-center justify-center z-10">
-        <div className="relative w-[280px] h-[51.3px] md:w-[1348.84px] md:h-[247px]">
+      <div className="absolute left-1/2 top-[38px] md:top-[38px] -translate-x-1/2 flex items-center justify-center z-10 w-[calc(100%-32px)] md:w-auto">
+        <div className="relative w-full h-[51.3px] md:w-[1348.84px] md:h-[247px]">
           <Image
             src="/images/runner-text.svg"
             alt="RUNNER"
@@ -72,7 +72,7 @@ export default function Home() {
           />
           {/* Running Man centered on logo */}
           <div
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[37.4px] h-[36.1px] md:w-[180px] md:h-[174px] cursor-pointer transition-transform"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[13.35%] aspect-[180/174] md:w-[180px] md:h-[174px] cursor-pointer transition-transform"
             onMouseEnter={() => setIsMascotHovered(true)}
             onMouseLeave={() => setIsMascotHovered(false)}
             style={{
@@ -96,10 +96,10 @@ export default function Home() {
       <div className="absolute left-1/2 bottom-[40px] md:bottom-[80px] -translate-x-1/2 z-10 flex flex-col items-center gap-4 md:gap-6 px-6">
         {/* Trade the moment subheading */}
         <h2
-          className="font-[family-name:var(--font-karl)] text-[24px] md:text-[48px] leading-[1.2] text-black text-center whitespace-nowrap"
+          className="font-[family-name:var(--font-karl)] text-[32px] md:text-[48px] leading-[1.2] text-black text-center whitespace-nowrap"
           style={{
             fontWeight: 500,
-            WebkitTextStroke: '6px #FFC800',
+            WebkitTextStroke: '8px #FFC800',
             paintOrder: 'stroke fill'
           }}
         >
@@ -118,19 +118,12 @@ export default function Home() {
           onClick={() => setIsModalOpen(true)}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="font-[family-name:var(--font-karl)] text-[14px] md:text-[18px] leading-[1.2] text-black text-center bg-white rounded-[56px] py-3 px-6 md:py-4 md:px-12 cursor-pointer uppercase transition-all duration-300 ease-in-out whitespace-nowrap"
+          className="font-[family-name:var(--font-karl)] text-[16px] md:text-[18px] leading-[1.2] text-black text-center bg-white rounded-[56px] py-4 px-8 md:py-4 md:px-12 cursor-pointer uppercase transition-all duration-300 ease-in-out whitespace-nowrap"
           style={{
             fontWeight: 500,
-            border: '2px solid #000000',
+            border: '3px solid #000000',
           }}
         >
-          <style jsx>{`
-            @media (min-width: 768px) {
-              button {
-                border: 3px solid #000000 !important;
-              }
-            }
-          `}</style>
           <span className="inline-flex items-center gap-2">
             GET EARLY ACCESS
             <span className={`inline-block transition-transform duration-300 ${isHovered ? 'translate-x-2' : ''}`}>→</span>
