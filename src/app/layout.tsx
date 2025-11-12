@@ -10,8 +10,11 @@ const karlST = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Runner - Coming Soon",
+  title: "Runner - Trade The Moment",
   description: "Be the first to know about Runner",
+  icons: {
+    icon: "/images/Favicon.png",
+  },
 };
 
 export default function RootLayout({
