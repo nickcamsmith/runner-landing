@@ -61,8 +61,8 @@ export default function Home() {
       </div>
 
       {/* Runner Text Logo with centered running man */}
-      <div className="absolute left-1/2 top-[38px] -translate-x-1/2 flex items-center justify-center z-10">
-        <div className="relative w-[1348.84px] h-[247px]">
+      <div className="absolute left-1/2 top-[38px] md:top-[38px] -translate-x-1/2 flex items-center justify-center z-10">
+        <div className="relative w-[280px] h-[51.3px] md:w-[1348.84px] md:h-[247px]">
           <Image
             src="/images/runner-text.svg"
             alt="RUNNER"
@@ -72,7 +72,7 @@ export default function Home() {
           />
           {/* Running Man centered on logo */}
           <div
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] h-[174px] cursor-pointer transition-transform"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[37.4px] h-[36.1px] md:w-[180px] md:h-[174px] cursor-pointer transition-transform"
             onMouseEnter={() => setIsMascotHovered(true)}
             onMouseLeave={() => setIsMascotHovered(false)}
             style={{
@@ -93,16 +93,23 @@ export default function Home() {
       </div>
 
       {/* Trade the moment subheading and Button */}
-      <div className="absolute left-1/2 bottom-[80px] -translate-x-1/2 z-10 flex flex-col items-center gap-6">
+      <div className="absolute left-1/2 bottom-[40px] md:bottom-[80px] -translate-x-1/2 z-10 flex flex-col items-center gap-4 md:gap-6 px-6">
         {/* Trade the moment subheading */}
         <h2
-          className="font-[family-name:var(--font-karl)] text-[48px] leading-[1.2] text-black text-center"
+          className="font-[family-name:var(--font-karl)] text-[24px] md:text-[48px] leading-[1.2] text-black text-center whitespace-nowrap"
           style={{
             fontWeight: 500,
-            WebkitTextStroke: '12px #FFC800',
+            WebkitTextStroke: '6px #FFC800',
             paintOrder: 'stroke fill'
           }}
         >
+          <style jsx>{`
+            @media (min-width: 768px) {
+              h2 {
+                -webkit-text-stroke: 12px #FFC800 !important;
+              }
+            }
+          `}</style>
           Trade the moment!
         </h2>
 
@@ -111,12 +118,19 @@ export default function Home() {
           onClick={() => setIsModalOpen(true)}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="font-[family-name:var(--font-karl)] text-[18px] leading-[1.2] text-black text-center bg-white rounded-[56px] py-4 px-12 cursor-pointer uppercase transition-all duration-300 ease-in-out"
+          className="font-[family-name:var(--font-karl)] text-[14px] md:text-[18px] leading-[1.2] text-black text-center bg-white rounded-[56px] py-3 px-6 md:py-4 md:px-12 cursor-pointer uppercase transition-all duration-300 ease-in-out whitespace-nowrap"
           style={{
             fontWeight: 500,
-            border: '3px solid #000000',
+            border: '2px solid #000000',
           }}
         >
+          <style jsx>{`
+            @media (min-width: 768px) {
+              button {
+                border: 3px solid #000000 !important;
+              }
+            }
+          `}</style>
           <span className="inline-flex items-center gap-2">
             GET EARLY ACCESS
             <span className={`inline-block transition-transform duration-300 ${isHovered ? 'translate-x-2' : ''}`}>→</span>
@@ -126,7 +140,7 @@ export default function Home() {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-6">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/80"
@@ -134,7 +148,7 @@ export default function Home() {
           />
 
           {/* Modal Content */}
-          <div className="relative bg-staq-gray border border-[#1D1D1D] rounded-[24px] p-6 w-[644px]">
+          <div className="relative bg-staq-gray border border-[#1D1D1D] rounded-[24px] p-6 w-full max-w-[644px] mx-6">
             {/* Close Button */}
             <div className="flex justify-end mb-2">
               <button
@@ -151,7 +165,7 @@ export default function Home() {
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="px-[88px] pb-8">
+            <form onSubmit={handleSubmit} className="px-6 md:px-[88px] pb-8">
               <div className="flex flex-col gap-10 items-center">
                 {/* Header */}
                 <div className="flex flex-col gap-2 w-full text-center">
